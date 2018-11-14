@@ -24,7 +24,7 @@ class Queue
     {
       cond_.wait(mlock);
     }
-    auto val = queue_.front();
+    T val = queue_.front();
     queue_.pop();
     return val;
   }
